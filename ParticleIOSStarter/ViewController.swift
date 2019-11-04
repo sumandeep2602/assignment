@@ -20,11 +20,30 @@ class ViewController: UIViewController {
     // Antonio's device
     let DEVICE_ID = "36001b001047363333343437"
     var myPhoton : ParticleDevice?
-
+    @IBOutlet weak var question: UITextView!
+    
     // MARK: Other variables
     var gameScore:Int = 0
-
+    @IBOutlet weak var imageView: UIImageView!
     
+    @IBAction func next(_ sender: UIButton) {
+           imageView.image = UIImage(named: "triangle")
+        
+        question.text = "is this shape a Triangle?"
+        
+        
+    }
+    
+    @IBAction func back(_ sender: UIButton) {
+         imageView.image = UIImage(named: "circle")
+        
+    }
+    @IBAction func submit(_ sender: UIButton) {
+        
+        imageView.image = UIImage(named: "square")
+        
+        question.text = "Is this shape a Square ??"
+    }
     // MARK: Outlets
     
     @IBOutlet weak var scoreLabel: UILabel!
