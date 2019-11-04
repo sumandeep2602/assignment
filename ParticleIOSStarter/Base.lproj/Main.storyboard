@@ -82,11 +82,19 @@
                                     <action selector="next:" destination="BYZ-38-t0r" eventType="touchUpInside" id="l9K-qd-Hfi"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="answer ?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RbA-Pv-99U">
+                                <rect key="frame" x="47" y="510" width="302" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="answer" destination="RbA-Pv-99U" id="OQn-ok-doU"/>
                         <outlet property="imageView" destination="gaU-Vh-Fgd" id="Vaa-Cc-dlS"/>
                         <outlet property="question" destination="OCk-id-b7G" id="n1j-AW-DBh"/>
                         <outlet property="scoreLabel" destination="jzl-Uf-pRY" id="d1J-MA-c7x"/>

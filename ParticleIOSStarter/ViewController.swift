@@ -22,6 +22,7 @@ class ViewController: UIViewController {
     var myPhoton : ParticleDevice?
     @IBOutlet weak var question: UITextView!
     
+    @IBOutlet weak var answer: UILabel!
     // MARK: Other variables
     var gameScore:Int = 0
     @IBOutlet weak var imageView: UIImageView!
@@ -36,7 +37,7 @@ class ViewController: UIViewController {
     
     @IBAction func back(_ sender: UIButton) {
          imageView.image = UIImage(named: "circle")
-        
+        question.text = "is this shape a circle? "
     }
     @IBAction func submit(_ sender: UIButton) {
         
@@ -136,6 +137,8 @@ class ViewController: UIViewController {
             (resultCode : NSNumber?, error : Error?) -> Void in
             if (error == nil) {
                 print("Sent message to Particle to turn green")
+                
+                self.answer.text = "CORRECT!! ,Great work"
             }
             else {
                 print("Error when telling Particle to turn green")
@@ -153,6 +156,7 @@ class ViewController: UIViewController {
         var task = myPhoton!.callFunction("answer", withArguments: parameters) {
             (resultCode : NSNumber?, error : Error?) -> Void in
             if (error == nil) {
+                self.answer.text = "OOPS ! Wrong answer"
                 print("Sent message to Particle to turn red")
             }
             else {
