@@ -11,14 +11,11 @@ import Particle_SDK
 class ViewController: UIViewController {
 
     // MARK: User variables
-    let USERNAME = "diljit7686@gmail.com"
-    let PASSWORD = "89687Dil$"
+    let USERNAME = "ksumanmaan3952@gmail.com"
+    let PASSWORD = "2602Jasbms"
     
-    // MARK: Device
-    // Jenelle's device
-    //let DEVICE_ID = "36001b001047363333343437"
-    // Antonio's device
-    let DEVICE_ID = "36001b001047363333343437"
+ 
+    let DEVICE_ID = "270025001047363333343437"
     var myPhoton : ParticleDevice?
     @IBOutlet weak var question: UITextView!
     
